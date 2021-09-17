@@ -6,17 +6,9 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"],
   };
 
-  // First Way
-  //   -Binding Event Handle-
-  //   constructor() {
-  //     super();
-  //     this.handleIncrement = this.handleIncrement.bind(this);
-  //   }
-
-  // Second Way - Arrow Functions
-  handleIncrement() {
-    console.log("Increment Clicked", this);
-  }
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
 
   render() {
     return (
